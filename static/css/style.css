@@ -1,0 +1,24 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: #f4f7fb;
+  color: #212529;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.card {
+  border: none;
+}
+
+footer {
+  background: #ffffff;
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(13, 110, 253, 0.05);
+}

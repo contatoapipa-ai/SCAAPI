@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center py-5">
+  <h1 class="display-5">Bem-vindo ao SCAAPI</h1>
+  <p class="lead">SCAAPI — Sistema de Cadastro de Animais da APIPA. Gerencie animais e interessados à adoção.</p>
+  <p>Cadastre novos animais, consulte a lista existente e registre adotantes interessados nas adoções.</p>
+  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+    <a class="btn btn-primary btn-lg px-4" href="{% url 'core:animal_list' %}">Ver animais</a>
+    <a class="btn btn-outline-primary btn-lg px-4" href="{% url 'core:animal_create' %}">Cadastrar animal</a>
+    <a class="btn btn-outline-success btn-lg px-4" href="{% url 'core:adotante_list' %}">Adotantes</a>
+  </div>
+</div>
+
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Cadastro Seguro</h5>
+        <p class="card-text">Use um formulário rápido para adicionar informações completas de cada animal.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Consulta Rápida</h5>
+        <p class="card-text">Veja a lista de animais cadastrados e acompanhe dados como idade, tipo e status de castração.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Design Profissional</h5>
+        <p class="card-text">Interface limpa e compatível com dispositivos móveis para apresentação mais confiável.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
