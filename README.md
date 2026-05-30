@@ -2,14 +2,11 @@
 
 SCAAPI — Sistema de Cadastro de Animais da APIPA.
 
-## Funcionalidades adicionadas
+## Funcionalidades
 
-- Página inicial profissional com apresentação do sistema
-- Lista de animais cadastrados
-- Formulário de cadastro de animal
-- Página de contato
-- Navegação responsiva com Bootstrap
-- Estilo customizado e tema mais moderno
+- Cadastrar animais e adotantes
+- Listar animais e adotantes cadastrados
+- Relacionar animais e adotantes
 
 ## Como executar
 
@@ -28,5 +25,3 @@ python manage.py runserver
 ```
 
 5. Acesse `http://127.0.0.1:8000/`.
-
-Observação: o site aparece como `SCAAPI` no cabeçalho e nas páginas.
