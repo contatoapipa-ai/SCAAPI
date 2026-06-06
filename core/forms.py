@@ -3,7 +3,37 @@ from django.db.models import Q
 from .models import Animal, Adotante
 
 
+class MultiFileInput(forms.ClearableFileInput):
+    allow_multiple_selected = True
+
+
+class MultiFileField(forms.FileField):
+    widget = MultiFileInput
+
+    def to_python(self, data):
+        if not data:
+            return []
+        if isinstance(data, list):
+            return [super().to_python(item) for item in data if item]
+        return [super().to_python(data)]
+
+    def validate(self, data):
+        if self.required and not data:
+            raise forms.ValidationError(self.error_messages['required'], code='required')
+        if isinstance(data, list):
+            for item in data:
+                super().validate(item)
+        else:
+            super().validate(data)
+
+
 class AnimalForm(forms.ModelForm):
+    images = MultiFileField(
+        required=False,
+        label='Fotos adicionais',
+        widget=MultiFileInput(attrs={'class': 'form-control', 'multiple': True})
+    )
+
     class Meta:
         model = Animal
         fields = ['especie', 'nome', 'foto', 'sexo', 'esterilizacao', 'nascimento', 'raca', 'pelagem', 'status', 'adotado']
@@ -34,6 +64,23 @@ class AnimalForm(forms.ModelForm):
         if content_type not in allowed:
             raise forms.ValidationError('Formato inválido. Use JPG ou PNG.')
         return foto
+
+    def clean_images(self):
+        images = self.cleaned_data.get('images')
+        if images is None:
+            images = self.files.getlist('images')
+        if not images:
+            return []
+
+        max_size = 3 * 1024 * 1024
+        allowed = ['image/jpeg', 'image/png']
+        for image in images:
+            if image.size > max_size:
+                raise forms.ValidationError('Cada imagem deve ter no máximo 3 MB.')
+            content_type = getattr(image, 'content_type', '')
+            if content_type not in allowed:
+                raise forms.ValidationError('Formato inválido. Use JPG ou PNG para todas as imagens.')
+        return images
 
 
 class AdotanteForm(forms.ModelForm):

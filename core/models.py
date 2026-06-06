@@ -8,6 +8,39 @@ except Exception:
     Image = None
 
 
+def _resize_image_field(image_field):
+    if not image_field or Image is None:
+        return
+    try:
+        img = Image.open(image_field.path)
+    except Exception:
+        try:
+            image_field.open()
+            img = Image.open(image_field)
+        except Exception:
+            return
+
+    max_size = (800, 800)
+    try:
+        resample_filter = Image.Resampling.LANCZOS
+    except Exception:
+        resample_filter = getattr(Image, 'LANCZOS', Image.BICUBIC)
+    img.thumbnail(max_size, resample_filter)
+
+    buffer = BytesIO()
+    fmt = 'JPEG' if img.mode in ('RGB', 'L', 'P') else 'PNG'
+    if img.mode in ('RGBA', 'LA') and fmt == 'JPEG':
+        background = Image.new('RGB', img.size, (255, 255, 255))
+        background.paste(img, mask=img.split()[3])
+        img = background
+        fmt = 'JPEG'
+    img.save(buffer, format=fmt, quality=85)
+    filecontent = ContentFile(buffer.getvalue())
+    name = image_field.name
+    image_field.save(name, filecontent, save=False)
+    buffer.close()
+
+
 ESPECIE_CHOICE = (
     ("CACHORRO", "Cachorro"),
     ("GATO", "Gato"),
@@ -65,45 +98,29 @@ class Animal(models.Model):
         return f"{self.nome} ({self.especie})"
 
     def save(self, *args, **kwargs):
-        # call original save first to ensure self.foto has a file
         super().save(*args, **kwargs)
-        if not self.foto:
-            return
-        if Image is None:
-            return
-        try:
-            img = Image.open(self.foto.path)
-        except Exception:
-            # fallback: try opening from file-like
-            try:
-                self.foto.open()
-                img = Image.open(self.foto)
-            except Exception:
-                return
+        _resize_image_field(self.foto)
+        if self.foto:
+            super().save(update_fields=['foto'])
 
-        max_size = (800, 800)
-        # Pillow 10 removed ANTIALIAS; use Resampling.LANCZOS when available
-        try:
-            resample_filter = Image.Resampling.LANCZOS
-        except Exception:
-            resample_filter = getattr(Image, 'LANCZOS', Image.BICUBIC)
-        img.thumbnail(max_size, resample_filter)
 
-        buffer = BytesIO()
-        format = 'JPEG' if img.mode in ('RGB', 'L', 'P') else 'PNG'
-        if img.mode in ('RGBA', 'LA') and format == 'JPEG':
-            # convert to RGB to save as JPEG
-            background = Image.new('RGB', img.size, (255, 255, 255))
-            background.paste(img, mask=img.split()[3])
-            img = background
-            format = 'JPEG'
-        img.save(buffer, format=format, quality=85)
-        filecontent = ContentFile(buffer.getvalue())
-        name = self.foto.name
-        # overwrite stored file
-        self.foto.save(name, filecontent, save=False)
-        buffer.close()
-        super().save(update_fields=['foto'])
+class AnimalImage(models.Model):
+    animal = models.ForeignKey('core.Animal', on_delete=models.CASCADE, related_name='imagens')
+    imagem = models.ImageField('imagem', upload_to='animal_images/')
+    criado_em = models.DateTimeField('criado em', auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Imagem do Animal'
+        verbose_name_plural = 'Imagens do Animal'
+
+    def __str__(self):
+        return f"Imagem de {self.animal.nome}"
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        _resize_image_field(self.imagem)
+        if self.imagem:
+            super().save(update_fields=['imagem'])
 
 
 class Adotante(models.Model):

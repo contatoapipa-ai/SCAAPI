@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Animal, Adotante
+from .models import Animal, Adotante, AnimalImage
 from django.db import models
 from .forms import AnimalForm, AdotanteForm
 
@@ -10,7 +10,7 @@ def home(request):
 
 def animal_list(request):
     q = request.GET.get('q', '').strip()
-    animais = Animal.objects.all()
+    animais = Animal.objects.select_related('adotante').prefetch_related('imagens').all()
     if q:
         animais = animais.filter(models.Q(nome__icontains=q) | models.Q(raca__icontains=q) | models.Q(especie__icontains=q))
     animais = animais.order_by('especie', 'nome')
@@ -22,7 +22,10 @@ def animal_create(request):
     if request.method == 'POST':
         form = AnimalForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            animal = form.save()
+            for image in form.cleaned_data.get('images', []):
+                if image:
+                    AnimalImage.objects.create(animal=animal, imagem=image)
             return redirect('core:animal_list')
     else:
         form = AnimalForm()
@@ -34,7 +37,10 @@ def animal_edit(request, pk):
     if request.method == 'POST':
         form = AnimalForm(request.POST, request.FILES, instance=animal)
         if form.is_valid():
-            form.save()
+            animal = form.save()
+            for image in form.cleaned_data.get('images', []):
+                if image:
+                    AnimalImage.objects.create(animal=animal, imagem=image)
             return redirect('core:animal_list')
     else:
         form = AnimalForm(instance=animal)

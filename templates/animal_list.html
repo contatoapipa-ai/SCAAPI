@@ -40,11 +40,15 @@
       {% for animal in animais %}
       <tr>
         <td>
-          {% if animal.foto %}
-            <img src="{{ animal.foto.url }}" alt="{{ animal.nome }}" style="height:48px;width:48px;object-fit:cover;border-radius:6px;margin-right:8px;" class="me-2">
-          {% else %}
-            <img src="{% static 'images/placeholder.svg' %}" alt="sem foto" style="height:48px;width:48px;object-fit:cover;border-radius:6px;margin-right:8px;" class="me-2">
-          {% endif %}
+          {% with animal.imagens.first as thumb %}
+            {% if thumb %}
+              <img src="{{ thumb.imagem.url }}" alt="{{ animal.nome }}" style="height:48px;width:48px;object-fit:cover;border-radius:6px;margin-right:8px;" class="me-2">
+            {% elif animal.foto %}
+              <img src="{{ animal.foto.url }}" alt="{{ animal.nome }}" style="height:48px;width:48px;object-fit:cover;border-radius:6px;margin-right:8px;" class="me-2">
+            {% else %}
+              <img src="{% static 'images/placeholder.svg' %}" alt="sem foto" style="height:48px;width:48px;object-fit:cover;border-radius:6px;margin-right:8px;" class="me-2">
+            {% endif %}
+          {% endwith %}
           {{ animal.nome }}
         </td>
         <td>{{ animal.get_especie_display }}</td>
