@@ -13,18 +13,28 @@ class MultiFileField(forms.FileField):
     def to_python(self, data):
         if not data:
             return []
+
+        parent = super(MultiFileField, self)
+
         if isinstance(data, list):
-            return [super().to_python(item) for item in data if item]
-        return [super().to_python(data)]
+            return [parent.to_python(item) for item in data if item]
+
+        return [parent.to_python(data)]
 
     def validate(self, data):
         if self.required and not data:
-            raise forms.ValidationError(self.error_messages['required'], code='required')
+            raise forms.ValidationError(
+                self.error_messages['required'],
+                code='required'
+            )
+
+        parent = super(MultiFileField, self)
+
         if isinstance(data, list):
             for item in data:
-                super().validate(item)
+                parent.validate(item)
         else:
-            super().validate(data)
+            parent.validate(data)
 
 
 class AnimalForm(forms.ModelForm):
