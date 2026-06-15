@@ -411,22 +411,5 @@
     "adotado": false,
     "adotante": null
   }
-},
-{
-  "model": "core.animal",
-  "pk": 15,
-  "fields": {
-    "especie": "CACHORRO",
-    "nome": "gerald",
-    "foto": "animals/animals/Dungeons_meshi_-_Falin_icon_.jpg",
-    "sexo": "MACHO",
-    "esterilizacao": "NAO",
-    "nascimento": null,
-    "raca": "SRD",
-    "pelagem": "AUSENTE",
-    "status": "VIVO",
-    "adotado": true,
-    "adotante": null
-  }
 }
 ]
