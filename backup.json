@@ -394,22 +394,5 @@
     "app_label": "core",
     "model": "animalimage"
   }
-},
-{
-  "model": "core.animal",
-  "pk": 14,
-  "fields": {
-    "especie": "CACHORRO",
-    "nome": "ronald",
-    "foto": "animals/animals/_gold_ship_square_face_icon__8NwoKwZ.jpg",
-    "sexo": "MACHO",
-    "esterilizacao": "NAO",
-    "nascimento": null,
-    "raca": "SRD",
-    "pelagem": "CURTA",
-    "status": "VIVO",
-    "adotado": false,
-    "adotante": null
-  }
 }
 ]
