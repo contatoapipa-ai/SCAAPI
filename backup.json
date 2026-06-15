@@ -394,22 +394,5 @@
     "app_label": "core",
     "model": "animalimage"
   }
-},
-{
-  "model": "core.animal",
-  "pk": 16,
-  "fields": {
-    "especie": "CACHORRO",
-    "nome": "kerald",
-    "foto": "animals/animals/_gold_ship_square_face_icon_.jpg",
-    "sexo": "MACHO",
-    "esterilizacao": "SIM",
-    "nascimento": "0112-12-31",
-    "raca": "SRD",
-    "pelagem": "CURTA",
-    "status": "VIVO",
-    "adotado": false,
-    "adotante": null
-  }
 }
 ]
