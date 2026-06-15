@@ -401,7 +401,7 @@
   "fields": {
     "especie": "CACHORRO",
     "nome": "bosta",
-    "foto": "",
+    "foto": "animals/animals/_gold_ship_square_face_icon__W9SGYPg.jpg",
     "sexo": "MACHO",
     "esterilizacao": "NAO",
     "nascimento": null,
