@@ -394,5 +394,22 @@
     "app_label": "core",
     "model": "animalimage"
   }
+},
+{
+  "model": "core.animal",
+  "pk": 20,
+  "fields": {
+    "especie": "CACHORRO",
+    "nome": "Juan",
+    "foto": "animals/animals/WhatsApp_Image_2026-06-10_at_18.05.13.jpeg",
+    "sexo": "MACHO",
+    "esterilizacao": "SIM",
+    "nascimento": null,
+    "raca": "BULLDOG",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": true,
+    "adotante": null
+  }
 }
 ]
