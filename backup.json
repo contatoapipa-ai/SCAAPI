@@ -464,23 +464,6 @@
   }
 },
 {
-  "model": "core.animal",
-  "pk": 24,
-  "fields": {
-    "especie": "CACHORRO",
-    "nome": "TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO PARA REALIZAÇÃO DE PROCEDIMENTO CIRÚR",
-    "foto": "",
-    "sexo": "MACHO",
-    "esterilizacao": "NAO",
-    "nascimento": null,
-    "raca": "SRD",
-    "pelagem": "CURTA",
-    "status": "VIVO",
-    "adotado": true,
-    "adotante": 2
-  }
-},
-{
   "model": "core.adotante",
   "pk": 1,
   "fields": {
