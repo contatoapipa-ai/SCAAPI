@@ -442,8 +442,8 @@
     "raca": "SRD",
     "pelagem": "CURTA",
     "status": "VIVO",
-    "adotado": false,
-    "adotante": null
+    "adotado": true,
+    "adotante": 1
   }
 },
 {
