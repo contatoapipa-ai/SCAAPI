@@ -413,6 +413,23 @@
   }
 },
 {
+  "model": "core.animal",
+  "pk": 21,
+  "fields": {
+    "especie": "CACHORRO",
+    "nome": "CHIQUINHO",
+    "foto": "",
+    "sexo": "MACHO",
+    "esterilizacao": "NAO",
+    "nascimento": null,
+    "raca": "SRD",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": false,
+    "adotante": null
+  }
+},
+{
   "model": "core.adotante",
   "pk": 1,
   "fields": {
