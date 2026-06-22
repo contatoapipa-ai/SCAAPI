@@ -430,6 +430,23 @@
   }
 },
 {
+  "model": "core.animal",
+  "pk": 22,
+  "fields": {
+    "especie": "CACHORRO",
+    "nome": "Juan2",
+    "foto": "",
+    "sexo": "MACHO",
+    "esterilizacao": "NAO",
+    "nascimento": null,
+    "raca": "SRD",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": false,
+    "adotante": null
+  }
+},
+{
   "model": "core.adotante",
   "pk": 1,
   "fields": {
