@@ -447,23 +447,6 @@
   }
 },
 {
-  "model": "core.animal",
-  "pk": 23,
-  "fields": {
-    "especie": "CACHORRO",
-    "nome": "Ceguinho",
-    "foto": "",
-    "sexo": "MACHO",
-    "esterilizacao": "NAO",
-    "nascimento": null,
-    "raca": "SRD",
-    "pelagem": "CURTA",
-    "status": "VIVO",
-    "adotado": true,
-    "adotante": 1
-  }
-},
-{
   "model": "core.adotante",
   "pk": 1,
   "fields": {
