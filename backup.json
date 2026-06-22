@@ -397,18 +397,18 @@
 },
 {
   "model": "core.animal",
-  "pk": 17,
+  "pk": 18,
   "fields": {
     "especie": "CACHORRO",
-    "nome": "bosta",
-    "foto": "animals/animals/_gold_ship_square_face_icon__W9SGYPg.jpg",
+    "nome": "CHIQUINHO",
+    "foto": "",
     "sexo": "MACHO",
     "esterilizacao": "NAO",
     "nascimento": null,
     "raca": "SRD",
     "pelagem": "CURTA",
     "status": "VIVO",
-    "adotado": false,
+    "adotado": true,
     "adotante": null
   }
 }
