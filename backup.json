@@ -425,8 +425,8 @@
     "raca": "SRD",
     "pelagem": "CURTA",
     "status": "VIVO",
-    "adotado": false,
-    "adotante": null
+    "adotado": true,
+    "adotante": 2
   }
 },
 {
@@ -489,6 +489,17 @@
     "telefone": "8600582381",
     "endereco": "Rua Boenópolis (C Leste), 5404",
     "criado_em": "2026-06-22T19:36:36.382Z"
+  }
+},
+{
+  "model": "core.adotante",
+  "pk": 2,
+  "fields": {
+    "nome": "Rafael",
+    "email": "rafael@gmail.com",
+    "telefone": "127319273917",
+    "endereco": "",
+    "criado_em": "2026-06-22T19:39:41.356Z"
   }
 }
 ]
