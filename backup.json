@@ -413,41 +413,6 @@
   }
 },
 {
-  "model": "core.animal",
-  "pk": 25,
-  "fields": {
-    "especie": "CACHORRO",
-    "nome": "Homero",
-    "foto": "animals/animals/WhatsApp_Image_2025-07-20_at_16.11.14.jpeg",
-    "sexo": "FEMEA",
-    "esterilizacao": "SIM",
-    "nascimento": "2023-08-22",
-    "raca": "SRD",
-    "pelagem": "CURTA",
-    "status": "VIVO",
-    "adotado": false,
-    "adotante": null
-  }
-},
-{
-  "model": "core.animalimage",
-  "pk": 8,
-  "fields": {
-    "animal": 25,
-    "imagem": "animal_images/animal_images/WhatsApp_Image_2026-04-16_at_16.13.05.jpeg",
-    "criado_em": "2026-06-22T19:55:38.193Z"
-  }
-},
-{
-  "model": "core.animalimage",
-  "pk": 9,
-  "fields": {
-    "animal": 25,
-    "imagem": "animal_images/animal_images/WhatsApp_Image_2026-04-16_at_16.13.07.jpeg",
-    "criado_em": "2026-06-22T19:55:38.245Z"
-  }
-},
-{
   "model": "core.adotante",
   "pk": 1,
   "fields": {
