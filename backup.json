@@ -396,6 +396,23 @@
   }
 },
 {
+  "model": "core.animal",
+  "pk": 26,
+  "fields": {
+    "especie": "CACHORRO",
+    "nome": "Dino",
+    "foto": "animals/animals/WhatsApp_Image_2025-07-18_at_22.21.57.jpeg",
+    "sexo": "MACHO",
+    "esterilizacao": "SIM",
+    "nascimento": "2022-02-01",
+    "raca": "SRD",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": false,
+    "adotante": null
+  }
+},
+{
   "model": "core.adotante",
   "pk": 1,
   "fields": {
