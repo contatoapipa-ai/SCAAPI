@@ -428,16 +428,5 @@
     "adotado": false,
     "adotante": null
   }
-},
-{
-  "model": "core.adotante",
-  "pk": 1,
-  "fields": {
-    "nome": "Isaac Rafael",
-    "email": "isaac@gmail.com",
-    "telefone": "8600582381",
-    "endereco": "Rua Boenópolis (C Leste), 5404",
-    "criado_em": "2026-06-22T19:36:36.382Z"
-  }
 }
 ]
