@@ -413,6 +413,23 @@
   }
 },
 {
+  "model": "core.animal",
+  "pk": 27,
+  "fields": {
+    "especie": "CACHORRO",
+    "nome": "Doxy",
+    "foto": "",
+    "sexo": "FEMEA",
+    "esterilizacao": "SIM",
+    "nascimento": "2021-01-01",
+    "raca": "SRD",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": false,
+    "adotante": null
+  }
+},
+{
   "model": "core.adotante",
   "pk": 1,
   "fields": {
