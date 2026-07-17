@@ -418,7 +418,7 @@
   "fields": {
     "especie": "CACHORRO",
     "nome": "Doxy",
-    "foto": "animals/animals/WhatsApp_Image_2026-07-10_at_19.38.14.jpeg",
+    "foto": "animals/animals/WhatsApp_Image_2026-07-10_at_19_kJDB1LV.38.14.jpeg",
     "sexo": "FEMEA",
     "esterilizacao": "SIM",
     "nascimento": null,
@@ -438,17 +438,6 @@
     "telefone": "8600582381",
     "endereco": "Rua Boenópolis (C Leste), 5404",
     "criado_em": "2026-06-22T19:36:36.382Z"
-  }
-},
-{
-  "model": "core.adotante",
-  "pk": 2,
-  "fields": {
-    "nome": "Rafael",
-    "email": "rafael@gmail.com",
-    "telefone": "127319273917",
-    "endereco": "",
-    "criado_em": "2026-06-22T19:39:41.356Z"
   }
 }
 ]
