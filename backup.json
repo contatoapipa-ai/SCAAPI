@@ -418,15 +418,26 @@
   "fields": {
     "especie": "CACHORRO",
     "nome": "Doxy",
-    "foto": "animals/animals/WhatsApp_Image_2026-07-10_at_19_kJDB1LV.38.14.jpeg",
+    "foto": "animals/animals/animals/WhatsApp_Image_2026-07-10_at_19_kJDB1LV.38.14.jpeg",
     "sexo": "FEMEA",
     "esterilizacao": "SIM",
     "nascimento": null,
     "raca": "SRD",
     "pelagem": "CURTA",
     "status": "VIVO",
-    "adotado": false,
-    "adotante": null
+    "adotado": true,
+    "adotante": 3
+  }
+},
+{
+  "model": "core.adotante",
+  "pk": 3,
+  "fields": {
+    "nome": "Luis Carlos F. Vieira",
+    "email": "",
+    "telefone": "86 99404-0091",
+    "endereco": "Res. Portal do Leste Qd H cs 16 Nº 6179 bairro Satélite\r\nTeresina-PI\r\nProfissão:  professor",
+    "criado_em": "2026-07-17T18:50:47.478Z"
   }
 }
 ]
