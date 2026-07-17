@@ -430,6 +430,23 @@
   }
 },
 {
+  "model": "core.animal",
+  "pk": 28,
+  "fields": {
+    "especie": "CACHORRO",
+    "nome": "Café",
+    "foto": "animals/animals/CAFÉ.jpeg",
+    "sexo": "MACHO",
+    "esterilizacao": "NAO",
+    "nascimento": "2026-01-07",
+    "raca": "SRD",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": false,
+    "adotante": null
+  }
+},
+{
   "model": "core.adotante",
   "pk": 3,
   "fields": {
