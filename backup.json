@@ -418,10 +418,10 @@
   "fields": {
     "especie": "CACHORRO",
     "nome": "Doxy",
-    "foto": "",
+    "foto": "animals/animals/DOXY.jpeg",
     "sexo": "FEMEA",
     "esterilizacao": "SIM",
-    "nascimento": "2021-01-01",
+    "nascimento": null,
     "raca": "SRD",
     "pelagem": "CURTA",
     "status": "VIVO",
