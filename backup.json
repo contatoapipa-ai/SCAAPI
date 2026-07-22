@@ -447,6 +447,23 @@
   }
 },
 {
+  "model": "core.animal",
+  "pk": 29,
+  "fields": {
+    "especie": "CACHORRO",
+    "nome": "Olga",
+    "foto": "animals/animals/OLGA.jpeg",
+    "sexo": "FEMEA",
+    "esterilizacao": "SIM",
+    "nascimento": "2022-05-25",
+    "raca": "SRD",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": false,
+    "adotante": null
+  }
+},
+{
   "model": "core.adotante",
   "pk": 3,
   "fields": {
