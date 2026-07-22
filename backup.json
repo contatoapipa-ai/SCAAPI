@@ -464,6 +464,23 @@
   }
 },
 {
+  "model": "core.animal",
+  "pk": 30,
+  "fields": {
+    "especie": "CACHORRO",
+    "nome": "Alice Amora",
+    "foto": "animals/animals/ALICE.jpeg",
+    "sexo": "FEMEA",
+    "esterilizacao": "SIM",
+    "nascimento": "2021-01-01",
+    "raca": "SRD",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": false,
+    "adotante": null
+  }
+},
+{
   "model": "core.adotante",
   "pk": 3,
   "fields": {
