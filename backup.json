@@ -481,6 +481,58 @@
   }
 },
 {
+  "model": "core.animal",
+  "pk": 31,
+  "fields": {
+    "especie": "GATO",
+    "nome": "Mãezinha",
+    "foto": "",
+    "sexo": "FEMEA",
+    "esterilizacao": "SIM",
+    "nascimento": "2023-08-22",
+    "raca": "SRD",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": false,
+    "adotante": null
+  }
+},
+{
+  "model": "core.animal",
+  "pk": 32,
+  "fields": {
+    "especie": "GATO",
+    "nome": "Mãezinha",
+    "foto": "",
+    "sexo": "FEMEA",
+    "esterilizacao": "SIM",
+    "nascimento": "2023-08-22",
+    "raca": "SRD",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": false,
+    "adotante": null
+  }
+},
+{
+  "model": "core.animalimage",
+  "pk": 10,
+  "fields": {
+    "animal": 32,
+    "imagem": "animal_images/animal_images/MÃEZINHA.jpeg",
+    "criado_em": "2026-11-11T15:47:07.562Z"
+  }
+},
+{
+  "model": "core.animalimage",
+  "pk": 11,
+  "fields": {
+    "animal": 31,
+    "imagem": "animal_images/animal_images/MÃEZINHA_vquYBHM.jpeg",
+    "criado_em": "2026-11-11T15:47:07.563Z"
+  }
+},
+{
   "model": "core.adotante",
   "pk": 3,
   "fields": {
