@@ -493,8 +493,8 @@
     "raca": "SRD",
     "pelagem": "CURTA",
     "status": "VIVO",
-    "adotado": false,
-    "adotante": null
+    "adotado": true,
+    "adotante": 5
   }
 },
 {
@@ -578,6 +578,17 @@
     "telefone": "86999862195",
     "endereco": "Rua Projetada 5727 Vale do Gavião",
     "criado_em": "2026-11-21T15:18:54.130Z"
+  }
+},
+{
+  "model": "core.adotante",
+  "pk": 5,
+  "fields": {
+    "nome": "Edvaldo Rodrigues Santiago da Silva",
+    "email": "",
+    "telefone": "86999862195",
+    "endereco": "Rua Projetada 5727 Vale do Gavião",
+    "criado_em": "2026-11-21T15:25:37.167Z"
   }
 }
 ]
