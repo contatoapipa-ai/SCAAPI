@@ -515,6 +515,23 @@
   }
 },
 {
+  "model": "core.animal",
+  "pk": 34,
+  "fields": {
+    "especie": "CACHORRO",
+    "nome": "Karen",
+    "foto": "",
+    "sexo": "FEMEA",
+    "esterilizacao": "SIM",
+    "nascimento": "2026-01-09",
+    "raca": "SRD",
+    "pelagem": "CURTA",
+    "status": "VIVO",
+    "adotado": false,
+    "adotante": null
+  }
+},
+{
   "model": "core.animalimage",
   "pk": 11,
   "fields": {
