@@ -523,7 +523,7 @@
     "foto": "",
     "sexo": "FEMEA",
     "esterilizacao": "SIM",
-    "nascimento": "2026-01-09",
+    "nascimento": null,
     "raca": "SRD",
     "pelagem": "CURTA",
     "status": "VIVO",
@@ -547,6 +547,15 @@
     "animal": 33,
     "imagem": "animal_images/animal_images/GOIABINHA.jpeg",
     "criado_em": "2026-11-11T15:50:14.440Z"
+  }
+},
+{
+  "model": "core.animalimage",
+  "pk": 13,
+  "fields": {
+    "animal": 34,
+    "imagem": "animal_images/animal_images/WhatsApp_Image_2026-11-21_at_12.22.46.jpeg",
+    "criado_em": "2026-11-21T15:23:07.910Z"
   }
 },
 {
