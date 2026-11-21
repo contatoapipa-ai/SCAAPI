@@ -493,8 +493,8 @@
     "raca": "SRD",
     "pelagem": "CURTA",
     "status": "VIVO",
-    "adotado": true,
-    "adotante": 4
+    "adotado": false,
+    "adotante": null
   }
 },
 {
@@ -527,8 +527,8 @@
     "raca": "SRD",
     "pelagem": "CURTA",
     "status": "VIVO",
-    "adotado": false,
-    "adotante": null
+    "adotado": true,
+    "adotante": 4
   }
 },
 {
